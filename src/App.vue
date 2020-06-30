@@ -25,23 +25,6 @@
       </moor-select>
     </div>
 
-    <div class="moor-item">
-      <label>Input: </label>
-      <moor-input
-      v-model="input1"
-      placeholder="请输入信息">
-      </moor-input>
-
-      <moor-input
-        v-model="input2"
-        placeholder="请输入信息">
-      </moor-input>
-
-      <moor-input
-        placeholder="输入框禁用"
-        :disabled="inputDisabled">
-      </moor-input>
-    </div>
 
     <div class="moor-item">
       <label>Switch: </label>
@@ -82,9 +65,7 @@ export default {
           label: '龙须面'
         }
       ],
-      // input
-      input1: '',
-      input2: '这是默认值',
+     
       inputDisabled: true,
       // switch
       lightSwitch: false,
@@ -97,8 +78,7 @@ export default {
     },
     handlePrint() {
       console.log('selectValue:', this.selectValue);
-      console.log('input1:', this.input1);
-      console.log('input2:', this.input2);
+      
     }
   },
   watch: {
@@ -108,7 +88,7 @@ export default {
 </script>
 
 <style lang="scss">
-.moor-select, .moor-btn, .moor-switch, .moor-input {
+.moor-select, .moor-btn, .moor-switch {
   margin: 10px 6px;
 }
 .moor-item {
